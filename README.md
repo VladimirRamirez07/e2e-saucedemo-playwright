@@ -10,7 +10,12 @@ E2E test automation for [SauceDemo](https://www.saucedemo.com) using Playwright,
 - Page Object Model (POM)
 
 ## 📁 Project Structure
+
+```
 e2e-saucedemo-playwright/
+├── .github/
+│   └── workflows/
+│       └── playwright.yml
 ├── pages/
 │   ├── LoginPage.ts
 │   ├── InventoryPage.ts
@@ -26,7 +31,10 @@ e2e-saucedemo-playwright/
 │   └── checkout/
 │       └── checkout.spec.ts
 ├── playwright.config.ts
-└── package.json
+├── package.json
+└── README.md
+```
+
 ## 🧪 Test Coverage
 
 | Module | Tests | Browsers |
