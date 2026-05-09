@@ -3,6 +3,7 @@ import { LoginPage } from '../../pages/LoginPage';
 import { InventoryPage } from '../../pages/InventoryPage';
 import { CartPage } from '../../pages/CartPage';
 import { CheckoutPage } from '../../pages/CheckoutPage';
+import { Users } from '../../test-data/users';
 
 test.describe('Checkout', () => {
 
@@ -12,7 +13,7 @@ test.describe('Checkout', () => {
     const cartPage = new CartPage(page);
 
     await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.login(Users.standard.username, Users.standard.password);
     await inventoryPage.addProductToCart('Sauce Labs Backpack');
     await inventoryPage.goToCart();
     await cartPage.proceedToCheckout();

@@ -1,13 +1,14 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
 import { InventoryPage } from '../../pages/InventoryPage';
+import { Users } from '../../test-data/users';
 
 test.describe('Products', () => {
 
   test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.login(Users.standard.username, Users.standard.password);
     await expect(page).toHaveURL('/inventory.html');
   });
 

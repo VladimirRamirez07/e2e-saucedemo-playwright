@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
 import { InventoryPage } from '../../pages/InventoryPage';
+import { Users, InvalidUsers } from '../../test-data/users';
 
 test.describe('Login', () => {
 
@@ -9,7 +10,7 @@ test.describe('Login', () => {
     const inventoryPage = new InventoryPage(page);
 
     await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.login(Users.standard.username, Users.standard.password);
 
     await expect(page).toHaveURL('/inventory.html');
     await expect(inventoryPage.productList.first()).toBeVisible();
@@ -19,7 +20,7 @@ test.describe('Login', () => {
     const loginPage = new LoginPage(page);
 
     await loginPage.goto();
-    await loginPage.login('invalid_user', 'wrong_password');
+    await loginPage.login(InvalidUsers.wrongUsername.username, InvalidUsers.wrongUsername.password);
 
     const error = await loginPage.getErrorMessage();
     expect(error).toContain('Username and password do not match');
@@ -29,7 +30,7 @@ test.describe('Login', () => {
     const loginPage = new LoginPage(page);
 
     await loginPage.goto();
-    await loginPage.login('locked_out_user', 'secret_sauce');
+    await loginPage.login(Users.locked.username, Users.locked.password);
 
     const error = await loginPage.getErrorMessage();
     expect(error).toContain('Sorry, this user has been locked out');
@@ -39,7 +40,7 @@ test.describe('Login', () => {
     const loginPage = new LoginPage(page);
 
     await loginPage.goto();
-    await loginPage.login('', '');
+    await loginPage.login(InvalidUsers.empty.username, InvalidUsers.empty.password);
 
     const error = await loginPage.getErrorMessage();
     expect(error).toContain('Username is required');
