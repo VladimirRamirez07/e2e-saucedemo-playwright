@@ -23,6 +23,8 @@ e2e-saucedemo-playwright/
 │   ├── InventoryPage.ts
 │   ├── CartPage.ts
 │   └── CheckoutPage.ts
+├── test-data/
+│   └── users.ts
 ├── tests/
 │   ├── login/
 │   │   └── login.spec.ts
@@ -30,9 +32,12 @@ e2e-saucedemo-playwright/
 │   │   └── products.spec.ts
 │   ├── cart/
 │   │   └── cart.spec.ts
-│   └── checkout/
-│       └── checkout.spec.ts
+│   ├── checkout/
+│   │   └── checkout.spec.ts
+│   └── users/
+│       └── users.spec.ts
 ├── playwright.config.ts
+├── tsconfig.json
 ├── package.json
 └── README.md
 ```
@@ -45,7 +50,8 @@ e2e-saucedemo-playwright/
 | Products | 6 | Chromium, Firefox, WebKit |
 | Cart | 4 | Chromium, Firefox, WebKit |
 | Checkout | 5 | Chromium, Firefox, WebKit |
-| **Total** | **57** | **3 browsers** |
+| Special Users | 5 | Chromium, Firefox, WebKit |
+| **Total** | **72** | **3 browsers** |
 
 ## 🚀 Getting Started
 
