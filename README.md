@@ -1,6 +1,12 @@
 # E2E Testing — SauceDemo 🧪
 
-![CI](https://github.com/VladimirRamirez07/e2e-saucedemo-playwright/actions/workflows/playwright.yml/badge.svg)
+# E2E Testing — SauceDemo 🧪
+
+![Playwright Tests](https://github.com/VladimirRamirez07/e2e-saucedemo-playwright/actions/workflows/playwright.yml/badge.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=flat&logo=playwright&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 
 E2E test automation for [SauceDemo](https://www.saucedemo.com) using Playwright, TypeScript and Page Object Model. Covers the complete business flow: login, product filtering, cart and checkout with automatic screenshots on failure and CI/CD via GitHub Actions.
 
