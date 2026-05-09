@@ -1,7 +1,5 @@
 # E2E Testing — SauceDemo 🧪
 
-# E2E Testing — SauceDemo 🧪
-
 ![Playwright Tests](https://github.com/VladimirRamirez07/e2e-saucedemo-playwright/actions/workflows/playwright.yml/badge.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-45ba4b?style=flat&logo=playwright&logoColor=white)
